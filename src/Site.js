@@ -3,64 +3,6 @@ import React from 'react';
 const Site = props => {
     return(
         <div>            
-            <div className='container-fluid bg-grey'>
-                <div className='row'>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-globe logo'></span>
-                    </div>
-                    <div className='col-sm-8'>
-                        <h2>Our Values</h2>
-                        <br />
-                        <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                        <br />
-                        <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {/* Container (Services Section) */}
-            <div id='services' className='container-fluid text-center'>
-                <h2>SERVICES</h2>
-                <h4>What we offer</h4>
-                <br />
-                <div className='row'>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-off logo-small'></span>
-                        <h4>POWER</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-heart logo-small'></span>
-                        <h4>LOVE</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-lock logo-small'></span>
-                        <h4>JOB DONE</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                </div>
-                <br /><br />
-                <div className='row'>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-leaf logo-small'></span>
-                        <h4>GREEN</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-certificate logo-small'></span>
-                        <h4>CERTIFIED</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-wrench logo-small'></span>
-                        {/* style='color:#303030;' */}
-                        <h4>HARD WORK</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                </div>
-            </div>
             {/* Container (Portfolio Section) */}
             <div id='portfolio' className='container-fluid text-center bg-grey'>
                 <h2>Portfolio</h2>
