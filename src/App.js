@@ -16,11 +16,16 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Header />
-          <About />
-          <Services />
-          <Portfolio />
-          <Pricing />
-          <Contact />
+          {/*
+            * if I don't put the "exact"
+            * every time I go to a route that has the "/"
+            * it will load the "about" and the respective component
+            */}
+          <Route path="/" exact component={About} />
+          <Route path="/services" component={Services} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/pricing" component={Pricing} />
+          <Route path="/contact" component={Contact} />
           <Footer />
         </div>
       </BrowserRouter>
