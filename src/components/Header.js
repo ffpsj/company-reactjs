@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//Link to creates navigation
+//link to creates navigation
 
 const Header = props => {
     return(
