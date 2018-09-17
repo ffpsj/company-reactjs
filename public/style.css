@@ -175,3 +175,32 @@ footer .glyphicon {
       font-size: 150px;
   }
 }
+.administrativeArea {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.administrativeArea .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+}
+.administrativeArea .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+}
+.list-group-item.active {
+    background-color: #f4511e;
+    border-color: #f4511e;
+}
+.list-group-item.active:hover {
+    background-color: #ffffff;
+    border-color: #f4511e;
+    color: #f4511e;
+}
+.administrativeArea .margin-top-h2 {
+    margin-top: 40px;
+}
+.administrativeArea .file-upload {
+    margin-bottom: 50px;
+}

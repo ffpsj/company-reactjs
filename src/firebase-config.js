@@ -18,5 +18,8 @@ const app = firebase.initializeApp(firebaseConfig)
 //step to use the bank with the rebase
 const config = rebase.createClass(app.database())
 
+//export the storage separated
+export const storage = app.storage()
+
 //export the component I want to use
 export default config

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
+//import storage from firebase-config
+import config, {storage} from './../firebase-config';
+
 import AdminMenu from './AdminMenu';
 import AdminPortfolio from './AdminPortfolio';
 
@@ -11,8 +14,8 @@ class Admin extends Component {
 
     render() {
         return(
-            <div>                
-                <h2>Administrative Panel</h2>
+            <div className='administrativeArea'>                
+                <h2 className='text-center'>Administrative Panel</h2>
                 <Route path={`/`} component={AdminMenu} />
                 {/* always takes the current url */}
                 <Route path={`${this.props.match.url}/portfolio`} component={AdminPortfolio} />
