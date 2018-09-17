@@ -193,7 +193,7 @@ footer .glyphicon {
     background-color: #f4511e;
     border-color: #f4511e;
 }
-.list-group-item.active:hover {
+.list-group-item.active:focus, .list-group-item.active:hover {
     background-color: #ffffff;
     border-color: #f4511e;
     color: #f4511e;
