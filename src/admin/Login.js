@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import config, { storage, auth } from './../firebase-config';
+
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -13,6 +15,15 @@ class Login extends Component {
 
     authUser() {
         console.log(this.loginEmail.value, this.loginPassword.value)
+
+        //authenticate what comes from the form
+        //if the user is authenticated, show it, otherwise show the error
+        auth.signInWithEmailAndPassword(this.loginEmail.value, this.loginPassword.value).then(user => {
+            console.log('Usuário: ', user)
+        })
+        .catch(err => {
+            console.log('Erro: ', err)
+        })
     }
 
     render() {
