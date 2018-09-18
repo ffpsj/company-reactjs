@@ -13,7 +13,7 @@ class Portfolio extends Component {
             portfolio: {}
         }
 
-        //synchronize the created state with the created bank
+        //synchronize the created state with the created database
         //receives the name of database, context, state (created here) and asArray set to false because it's an object
         config.syncState('portfolio', {
             context: this,

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-//import storage from firebase-config
-import config, {storage} from './../firebase-config';
-
 import AdminMenu from './AdminMenu';
 import AdminPortfolio from './AdminPortfolio';
 
