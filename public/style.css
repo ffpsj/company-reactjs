@@ -215,3 +215,6 @@ footer .glyphicon {
 .col-sm-4 .portfolio-hover:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
+.error-text {
+    color: red;
+}
