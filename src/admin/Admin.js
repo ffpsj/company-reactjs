@@ -1,15 +1,44 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
+import { auth } from './../firebase-config';
 import AdminMenu from './AdminMenu';
 import AdminPortfolio from './AdminPortfolio';
 
 class Admin extends Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            isAuthenticated: false,
+            isLoging: true,
+            user: null,
+        }
+    }
+
+    //as soon as the component renders on the screen
+    componentDidMount() {
+        //if there was a change in authentication state receives user and record on this state
+        auth.onAuthStateChanged(user => {
+            this.setState({
+                isAuthenticated: !!user, //or true or false
+                isLoging: false,
+                user,
+            })
+        })
     }
 
     render() {
+        if(this.state.isLoging) {
+            return(
+                <p>Loading...</p>
+            )
+        }
+        else if(!this.state.isAuthenticated) {
+            return(
+                <Redirect to='/login' />
+            )
+        }
         return(
             <div className='administrativeTop'>                
                 <h2 className='text-center'>Administrative Panel</h2>
