@@ -22,7 +22,7 @@ const Header = props => {
                             <li><Link to='/portfolio'>PORTFOLIO</Link></li>
                             <li><Link to='/pricing'>PRICING</Link></li>
                             <li><Link to='/contact'>CONTACT</Link></li>
-                            <li><Link to='/admin'>ADMIN</Link></li>
+                            <li><Link to='/login'>LOGIN</Link></li>
                         </ul>
                     </div>
                 </div>

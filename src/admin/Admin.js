@@ -11,7 +11,7 @@ class Admin extends Component {
 
     render() {
         return(
-            <div className='administrativeArea'>                
+            <div className='administrativeTop'>                
                 <h2 className='text-center'>Administrative Panel</h2>
                 <Route path={`/`} component={AdminMenu} />
                 {/* always takes the current url */}
