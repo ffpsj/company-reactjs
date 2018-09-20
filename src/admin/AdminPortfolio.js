@@ -6,11 +6,28 @@ import config, {storage} from './../firebase-config';
 class AdminPortfolio extends Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            isLoading: false,
+            isSaved: false,
+        }
+
         //create access to this in a savePortfolio function
         this.savePortfolio = this.savePortfolio.bind(this)
     }
 
     savePortfolio(e) {
+        //with the "isLoading" true the "databaseInformation" object no longer exists
+        //so we create an object before setting it to true and save your information
+        const itemPortfolio = {
+            title: this.title.value,
+            subtitle: this.subtitle.value,
+            image: this.image,
+        }
+        this.setState({
+            isLoading: true,
+            isSaved: false,
+        })
         //shows the content in question
         console.log(this.title.value)
         console.log(this.subtitle.value)
@@ -18,7 +35,7 @@ class AdminPortfolio extends Component {
 
         //files return an array with all informations about image
         //choose exactly the first element (0)
-        const archive = this.image.files[0]
+        const archive = itemPortfolio.image.files[0]
         //get the chosen elements from archive
         const {name, size, type} = archive
         console.log(name, size, type)
@@ -35,8 +52,8 @@ class AdminPortfolio extends Component {
                 console.log(imageURL)
                 //create an object to put on the database, with all informations collected in the form
                 const databaseInformation = {
-                    title: this.title.value,
-                    subtitle: this.subtitle.value,
+                    title: itemPortfolio.title,
+                    subtitle: itemPortfolio.subtitle,
                     image: imageURL,
                 }
                 console.log(databaseInformation)
@@ -44,6 +61,15 @@ class AdminPortfolio extends Component {
                 config.push('portfolio', {
                     data: databaseInformation
                 })
+                this.setState({
+                    isLoading: false,
+                    isSaved: true,
+                })
+                setTimeout(() => {
+                    this.setState({
+                        isLoading: false,
+                        isSaved: false,
+                })}, 2000);
             })
         })
 
@@ -56,6 +82,20 @@ class AdminPortfolio extends Component {
     //from " to '
     //close all tags
     render() {
+        if(!this.state.isSaved && this.state.isLoading) {
+            return(
+                <div className='spinnerContainer'>
+                    <i className='fa fa-spinner fa-spin' />
+                </div>
+            )
+        }
+        else if(this.state.isSaved && !this.state.isLoading) {
+            return(
+                <div className='spinnerContainer'>
+                    <i className="fa fa-check" />
+                </div>
+            )
+        }
         return(
             <div className='administrativeArea'>
                 <h2 className='margin-top-h2 text-center'>Portfolio Admninistrative Area</h2>

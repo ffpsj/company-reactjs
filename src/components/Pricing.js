@@ -7,7 +7,7 @@ const Pricing = props => {
                 <h2>Pricing</h2>
                 <h4>Choose a payment plan that works for you</h4>
             </div>
-            <div className='row'>
+            <div className='row slideanim'>
                 <div className='col-sm-4 col-xs-12'>
                     <div className='panel panel-default text-center'>
                         <div className='panel-heading'>

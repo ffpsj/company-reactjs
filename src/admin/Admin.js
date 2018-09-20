@@ -31,7 +31,9 @@ class Admin extends Component {
     render() {
         if(this.state.isLoging) {
             return(
-                <p>Loading...</p>
+                <div className='spinnerContainer'>
+                    <i className='fa fa-spinner fa-spin' />
+                </div>
             )
         }
         else if(!this.state.isAuthenticated) {
@@ -40,7 +42,7 @@ class Admin extends Component {
             )
         }
         return(
-            <div className='administrativeTop'>                
+            <div className='administrativeTop'>
                 <h2 className='text-center'>Administrative Panel</h2>
                 <Route path={`/`} component={AdminMenu} />
                 {/* always takes the current url */}

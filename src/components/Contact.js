@@ -11,7 +11,7 @@ const Contact = props => {
                     <p><span className='glyphicon glyphicon-phone'></span> +00 1515151515</p>
                     <p><span className='glyphicon glyphicon-envelope'></span> myemail@something.com</p>
                 </div>
-                <div className='col-sm-7'>
+                <div className='col-sm-7 slideanim'>
                     <div className='row'>
                         <div className='col-sm-6 form-group'>
                             <input className='form-control' id='name' name='name' placeholder='Name' type='text' required />

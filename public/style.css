@@ -184,6 +184,14 @@ footer .glyphicon {
 .administrativeTop {
     margin-top: 50px;
 }
+.spinnerContainer {
+    margin-top: 50px;
+    text-align: center;
+}
+.spinnerContainer i {
+    font-size: 150px;
+    color: #f4511e;
+}
 .administrativeArea .btn {
     margin: 15px 0;
     background-color: #f4511e;

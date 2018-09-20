@@ -21,7 +21,7 @@ const About = props => {
             <div className='container-fluid bg-grey'>
                 <div className='row'>
                     <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-globe logo'></span>
+                        <span className='glyphicon glyphicon-globe logo slideanim'></span>
                     </div>
                     <div className='col-sm-8'>
                         <h2>Our Values</h2>

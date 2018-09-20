@@ -28,7 +28,7 @@ class Portfolio extends Component {
                 <h2>Portfolio</h2>
                 <br />
                 <h4>What we have created</h4>
-                <div className='row text-center'>
+                <div className='row text-center slideanim'>
                     {
                         //works as a for, every time you find a key, for each of them returns the element
                         Object.keys(this.state.portfolio).map(key => {
